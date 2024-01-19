@@ -1,0 +1,83 @@
+:root {
+	--color1: #ffc107;
+}
+
+body {
+	padding: 2rem;
+	background-color: #ffffff;
+	background-image: url(../img/cork-board.jpg);
+}
+
+.dark-mode {
+	background-color: #000000;
+	background-image: none;
+}
+
+.btn-dark-mode,
+.btn-add-note,
+.btn-cloud {
+	position: absolute;
+	z-index: 99;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.btn-dark-mode .icon,
+.btn-add-note .icon,
+.btn-cloud .icon {
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--color1);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #8c6900;
+}
+
+.btn-dark-mode {
+	bottom: 5rem;
+}
+.btn-cloud {
+	bottom: 9rem;
+}
+.add-note-form {
+	padding: 2rem;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(12, 45, 56, 0.8);
+}
+
+.add-note-form > form > div {
+	margin: 0 auto;
+	width: 50vw;
+}
+
+input[name="colors"]:checked + label {
+	border: 3px solid black;
+	padding: 0.7rem;
+}
+
+.loader {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.855);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
