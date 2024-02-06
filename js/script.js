@@ -33,7 +33,6 @@ document.getElementById("btnAddNote").addEventListener("click", async ()=>{
         const note = noteEl.value;
         const color = colorEl.id;
 
-        // Form validation
         if(!title) throw new Error("Plase enter a title");
         if(!note) throw new Error("Plase enter a note");
         color ??= "light"; // color = color ?? "light"
@@ -44,16 +43,9 @@ document.getElementById("btnAddNote").addEventListener("click", async ()=>{
             color
         }
 
-        // API üzerinden yeni note ekle
         const data = await createNote(newNote);
         const row = document.querySelector("#board .row");
-
-       
-        // Sayfaya, eklenen note ile alakalı card ekle
         createNoteElement(data, row)
-
-
-        // Reset
         resetAddNoteForm(titleEl, noteEl);
         
     } catch (err) {
@@ -134,13 +126,8 @@ const createNoteHTML = (data) => {
 }
 
 const createNoteElement = (data, row) => { 
-    // Sayfaya, eklenen note ile alakalı card ekle
     const newNoteHTML = createNoteHTML(data);
-
-    // append, innerHTML, insertAdjacentHTML
-    // row.innerHTML = newNoteHTML + row.innerHTML;
-    row.insertAdjacentHTML("afterbegin", newNoteHTML); // Card DOM'a yerleşir
-
+    row.insertAdjacentHTML("afterbegin", newNoteHTML);
     const deleteButton = row.querySelector(`div[data-id="${data.id}"] button`);
     deleteButton.addEventListener("click", () => removeNoteElement(data.id) )
 }
