@@ -19,5 +19,6 @@ Here are a couple of screenshots from my project:
 - CSS
 - Mock API
 
-=>git clone : https://github.com/Sumeyye-Mete/dream-serious-app.git
-=> live site URL :  https://dream-app-serious.netlify.app/
+### Links
+- git clone : https://github.com/Sumeyye-Mete/dream-serious-app.git
+- live site URL :  https://dream-app-serious.netlify.app/
