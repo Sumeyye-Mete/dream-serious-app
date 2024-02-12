@@ -80,6 +80,11 @@ const loadNotes = async () => {
 }
 
 const toggleAddNoteForm = () => { 
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
     document.querySelector(".add-note-form").classList.toggle("d-none");
     const btnShowAddNoteForm = document.querySelector("#btnShowAddNoteForm i");
     btnShowAddNoteForm.classList.toggle("fa-plus");
