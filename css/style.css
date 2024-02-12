@@ -16,7 +16,7 @@ body {
 .btn-dark-mode,
 .btn-add-note,
 .btn-cloud {
-	position: absolute;
+	position: fixed;
 	z-index: 99;
 	bottom: 1rem;
 	right: 1rem;
